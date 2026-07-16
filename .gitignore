@@ -1,0 +1,48 @@
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Re]leases/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio Cache and settings
+.vs/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## VS Code
+.vscode/
+
+## Rider / IntelliJ
+.idea/
+*.sln.iml
+
+## dotnet core / ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Publish output
+publish/
+
+## Backup & temporary files
+*~
+*.tmp
+*.bak
+
+## OS-specific files
+.DS_Store
+Thumbs.db

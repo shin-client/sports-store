@@ -1,0 +1,24 @@
+﻿@model IEnumerable<SportsStore.Domain.Entities.Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-4">
+    <h2>Danh sách sản phẩm (MOCK DATA)</h2>
+    <div class="row">
+        @foreach (var p in Model)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@p.Name</h5>
+                        <p class="card-text text-muted">@p.Description</p>
+                        <span class="badge bg-secondary mb-2">@p.Category</span>
+                        <h4 class="text-danger">@p.Price.ToString("C")</h4>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

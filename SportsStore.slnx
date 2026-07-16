@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/src/">
+    <Project Path="src/SportsStore.Application/SportsStore.Application.csproj" />
+    <Project Path="src/SportsStore.Domain/SportsStore.Domain.csproj" />
+    <Project Path="src/SportsStore.Infrastructure/SportsStore.Infrastructure.csproj" />
+    <Project Path="src/SportsStore.WebUI/SportsStore.WebUI.csproj" />
+  </Folder>
+</Solution>
