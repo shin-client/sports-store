@@ -46,3 +46,8 @@ publish/
 ## OS-specific files
 .DS_Store
 Thumbs.db
+
+## Agent & second-brain workspace symlinks/folders
+.claude
+.omp
+second-brain/
