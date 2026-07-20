@@ -1,18 +1,19 @@
-﻿@page "/"
-@inject IProductRepository ProductRepo
+@model IEnumerable<Product>
 
-<PageTitle>Danh sách sản phẩm</PageTitle>
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+}
 
 <div class="container mt-4">
     <h2>Danh sách sản phẩm (MOCK DATA)</h2>
-    @if (products == null)
+    @if (Model == null || !Model.Any())
     {
-        <p><em>Đang tải...</em></p>
+        <p><em>Không có sản phẩm nào.</em></p>
     }
     else
     {
         <div class="row">
-            @foreach (var p in products)
+            @foreach (var p in Model)
             {
                 <div class="col-md-4 mb-3">
                     <div class="card h-100">
@@ -28,13 +29,3 @@
         </div>
     }
 </div>
-
-@code {
-    private IEnumerable<Product>? products;
-
-    protected override void OnInitialized()
-    {
-        products = ProductRepo.Products.ToList();
-    }
-}
-
