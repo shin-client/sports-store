@@ -1,0 +1,48 @@
+@model CartIndexViewModel
+
+<h2>Giỏ hàng của bạn</h2>
+
+<table class="table table-bordered table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Số lượng</th>
+            <th>Sản phẩm</th>
+            <th class="text-end">Đơn giá</th>
+            <th class="text-end">Thành tiền</th>
+            <th class="text-center">Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.Cart.Lines)
+        {
+            <tr>
+                <td class="text-center">@line.Quantity</td>
+                <td class="text-start">@line.Product.Name</td>
+                <td class="text-end">@line.Product.Price.ToString("c")</td>
+                <td class="text-end">@((line.Quantity * line.Product.Price).ToString("c"))</td>
+                <td class="text-center">
+                    <form asp-action="RemoveFromCart" method="post">
+                        <input type="hidden" name="productId" value="@line.Product.ProductID" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-end fw-bold">Tổng cộng:</td>
+            <td class="text-end fw-bold">
+                @Model.Cart.ComputeTotalValue().ToString("c")
+            </td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center mt-3">
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Tiếp tục mua hàng</a>
+</div>
