@@ -1,0 +1,19 @@
+@using SportsStore.WebUI.Infrastructure
+@model Cart
+
+<div class="d-flex align-items-center me-3">
+    @if (Model.Lines.Any())
+    {
+        <small class="navbar-text me-2">
+            <b>Giỏ hàng:</b>
+            @Model.Lines.Sum(x => x.Quantity) sản phẩm
+            (@Model.ComputeTotalValue().ToString("c"))
+        </small>
+    }
+    <a class="btn btn-sm btn-outline-primary"
+       asp-controller="Cart"
+       asp-action="Index"
+       asp-route-returnurl="@ViewContext.HttpContext.Request.PathAndQuery()">
+        🛒 Giỏ hàng
+    </a>
+</div>

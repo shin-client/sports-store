@@ -1,0 +1,26 @@
+@model IEnumerable<string>
+  @{ var btnClass = ViewBag.SelectedCategory == null ? "btn-primary" :
+  "btn-outline-secondary"; }
+
+  <div class="d-grid gap-2">
+    <a
+      class="btn @btnClass"
+      asp-controller="Home"
+      asp-action="Index"
+      asp-route-category=""
+    >
+      Trang chủ (Tất cả)
+    </a>
+
+    @foreach (string category in Model) {
+    <a
+      class="btn @btnClass"
+      asp-controller="Home"
+      asp-action="Index"
+      asp-route-category="@category"
+    >
+      @category
+    </a>
+    }
+  </div>
+</string>
