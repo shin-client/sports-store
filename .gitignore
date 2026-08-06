@@ -50,4 +50,4 @@ Thumbs.db
 ## Agent & second-brain workspace symlinks/folders
 .claude
 .omp
-second-brain/
+second-brain
