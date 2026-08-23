@@ -1,8 +1,8 @@
-# 📋 CHECKLIST THỰC HÀNH LAB 06: EF CORE & REPOSITORY PATTERN
+# CHECKLIST THỰC HÀNH LAB 06: EF CORE & REPOSITORY PATTERN
 
 ---
 
-## 🟢 GIAI ĐOẠN 1: Cài đặt Packages & Khởi tạo DbContext (`SportsStore.Infrastructure`)
+## GIAI ĐOẠN 1: Cài đặt Packages & Khởi tạo DbContext (`SportsStore.Infrastructure`)
 
 ### 1. Cài đặt các gói NuGet cần thiết
 
@@ -72,7 +72,7 @@
 
 ---
 
-## 🟢 GIAI ĐOẠN 2: Cấu hình WebUI & Dependency Injection (`SportsStore.WebUI`)
+## GIAI ĐOẠN 2: Cấu hình WebUI & Dependency Injection (`SportsStore.WebUI`)
 
 ### 4. Thêm Connection String trong `appsettings.json`
 
@@ -116,7 +116,7 @@
 
 ---
 
-## 🟢 GIAI ĐOẠN 3: Tạo & Seeding Dữ Liệu Ban Đầu (`SeedData.cs`)
+## GIAI ĐOẠN 3: Tạo & Seeding Dữ Liệu Ban Đầu (`SeedData.cs`)
 
 ### 6. Tạo lớp `SeedData.cs`
 
@@ -191,7 +191,7 @@
 
 ---
 
-## 🟢 GIAI ĐOẠN 4: Kiểm tra & Chạy ứng dụng (Verification)
+## GIAI ĐOẠN 4: Kiểm tra & Chạy ứng dụng (Verification)
 
 ### 8. Kiểm thử & Chạy ứng dụng
 
