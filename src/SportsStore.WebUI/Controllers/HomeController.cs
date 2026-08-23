@@ -8,7 +8,7 @@ namespace SportsStore.WebUI.Controllers;
 public class HomeController : Controller
 {
     private readonly IProductRepository _repository;
-    public int PageSize = 4;
+    public int PageSize = 6;
 
     public HomeController(IProductRepository repository)
     {
