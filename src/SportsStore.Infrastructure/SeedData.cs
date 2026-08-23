@@ -17,10 +17,6 @@ public static class SeedData
         {
             context.Database.Migrate();
         }
-        else
-        {
-            context.Database.EnsureCreated();
-        }
 
         if (!context.Products.Any())
         {
